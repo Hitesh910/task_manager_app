@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const Text(
                     "Search for Task , Events",
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 16,color: Colors.black,),
                   ),
                 ],
               ),
