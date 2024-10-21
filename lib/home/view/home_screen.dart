@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 15,
             ),
-             Text(
+             const Text(
               "Categories",
               style: TextStyle(
                 fontSize: 22,
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Today Task",style: TextStyle(fontSize: 22
+                  const Text("Today Task",style: TextStyle(fontSize: 22
                       ,fontWeight: FontWeight.bold),),
                   Text("See all",style: TextStyle(fontSize: 18,color: blue),),
                 ],
@@ -144,10 +144,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar:  BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.blue,),label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.calendar_month,color: Colors.blue),label: "Calender"),
-        BottomNavigationBarItem(icon: Icon(Icons.add,color: Colors.blue),label: "Add"),
-        BottomNavigationBarItem(icon: Icon(Icons.settings,color: Colors.blue),label: "Setting"),
+        const BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.blue,),label: "Home"),
+        const BottomNavigationBarItem(icon: Icon(Icons.calendar_month,color: Colors.blue),label: "Calender"),
+        const BottomNavigationBarItem(icon: Icon(Icons.add,color: Colors.blue),label: "Add"),
+        const BottomNavigationBarItem(icon: Icon(Icons.settings,color: Colors.blue),label: "Setting"),
       ]),
     );
   }
