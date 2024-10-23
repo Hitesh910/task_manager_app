@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:task_manager_app/utils/app_color.dart';
 
@@ -9,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int no =0;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.sizeOf(context).height;
@@ -143,11 +146,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar:  BottomNavigationBar(items: [
-        const BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.blue,),label: "Home"),
-        const BottomNavigationBarItem(icon: Icon(Icons.calendar_month,color: Colors.blue),label: "Calender"),
-        const BottomNavigationBarItem(icon: Icon(Icons.add,color: Colors.blue),label: "Add"),
-        const BottomNavigationBarItem(icon: Icon(Icons.settings,color: Colors.blue),label: "Setting"),
+      bottomNavigationBar:  BottomNavigationBar(onTap: (value) {
+      setState(() {
+        no = value;
+      });
+      },selectedItemColor: Colors.yellow,unselectedItemColor: Colors.black12,currentIndex: no,backgroundColor: Colors.white24,items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.blue,),label: "Home",backgroundColor: Colors.white),
+        BottomNavigationBarItem(icon: Icon(Icons.calendar_month,color: Colors.blue),label: "Calender"),
+        BottomNavigationBarItem(icon: Icon(Icons.add,color: Colors.blue),label: "Add"),
+        BottomNavigationBarItem(icon: Icon(Icons.settings,color: Colors.blue),label: "Setting"),
       ]),
     );
   }
